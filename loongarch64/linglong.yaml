@@ -26,9 +26,7 @@ build: |
   cd build
   cmake -DVERSION=5.10.13.1 -DCMAKE_INSTALL_PREFIX=${PREFIX} ${extra_args} ../linglong/sources/deepin-editor
   make -j6
-  #make test -j6
-  #test 用例包含从/usr/share读取内容，会导致失败
-  make -j install
+  make -j1 install
 
 sources:
   - kind: git
